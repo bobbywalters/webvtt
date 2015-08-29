@@ -32,9 +32,9 @@ With each value described as:
 
 As an example, a video file named `'my-video.mp4'` would be able to leverage uploaded track files named:
 
-* `'my-video-chapters-en.vtt'` to add a chapters listing in English
-* `'my-video-subtitles-en.vtt'` to add a subtitles track in English
-* `'my-video-subtitles-es.vtt'` to add a subtitles track in Spanish
+* `'my-video-chapters-en.vtt'` to add English chapters
+* `'my-video-subtitles-en.vtt'` to add English subtitles
+* `'my-video-subtitles-es.vtt'` to add Spanish subtitles
 
 == Installation ==
 
@@ -64,11 +64,19 @@ Please see the Description section for a full explanation of the VTT file name f
 
 == Changelog ==
 
-= 1.0.1 =
-Released 2015-08-19
+= 1.1.0 =
+2015-08-29
 
-* NEW: Added Screen shots and filled in more readme sections
-* FIX: Corrected `.vtt` file names in examples
+* NEW: Links between video and VTTs are shown in the media library and on edit pages.
+* NEW: Improved VTT query performance and results can now be cached.
+* NEW: Using [classes plugin boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate).
+* FIX: Cleaned up PHPCS WordPress standard sniffs.
+
+= 1.0.1 =
+2015-08-19
+
+* NEW: Added Screen shots and filled in more readme sections.
+* FIX: Corrected `.vtt` file names in examples.
 
 = 1.0.0 =
 Initial release.
