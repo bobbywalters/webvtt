@@ -61,16 +61,26 @@ Please see the Description section for a full explanation of the VTT file name f
 
 1. Upload video and associated VTT files following the naming convention.
 2. Video being displayed using the `[video]` shortcode with the VTT tracks available.
+3. Video and VTT attachments display reference links on media library and edit pages.
+4. Localization support on all screens.
 
 == Changelog ==
+
+= 1.2.0 =
+2015-08-30
+
+* NEW: Added POT and first translation (Spanish).
+* NEW: Added screenshots of media library and localization support.
+* FIX: Better attachment metadata localization handling in media library view.
 
 = 1.1.0 =
 2015-08-29
 
 * NEW: Links between video and VTTs are shown in the media library and on edit pages.
 * NEW: Improved VTT query performance and results can now be cached.
+* NEW: Filter by `Video tracks` in media library to show only VTT attachments.
 * NEW: Using [classes plugin boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate).
-* FIX: Cleaned up PHPCS WordPress standard sniffs.
+* FIX: Cleaned up [PHPCS WordPress standard](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) sniffs.
 
 = 1.0.1 =
 2015-08-19

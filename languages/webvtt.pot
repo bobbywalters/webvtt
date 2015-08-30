@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WebVTT\n"
+"POT-Creation-Date: 2015-08-30 14:59-0500\n"
+"PO-Revision-Date: 2015-08-30 15:01-0500\n"
+"Last-Translator: Bobby Walters\n"
+"Language-Team: Bobby Walters\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_n_noop\n"
+"X-Poedit-SearchPath-0: ../admin\n"
+"X-Poedit-SearchPath-1: ../includes\n"
+
+#: ../admin/class-webvtt-admin.php:63
+msgid "Video Captions"
+msgstr ""
+
+#: ../admin/class-webvtt-admin.php:64
+msgid "Video Chapters"
+msgstr ""
+
+#: ../admin/class-webvtt-admin.php:65
+msgid "Video Descriptions"
+msgstr ""
+
+#: ../admin/class-webvtt-admin.php:66
+msgid "Video Metadata"
+msgstr ""
+
+#: ../admin/class-webvtt-admin.php:67
+msgid "Video Subtitles"
+msgstr ""
+
+#: ../admin/class-webvtt-admin.php:139
+msgid "Video tracks"
+msgstr ""
+
+#: ../admin/class-webvtt-admin.php:140
+msgid "Manage Video Tracks"
+msgstr ""
+
+#: ../admin/class-webvtt-admin.php:141
+#, php-format
+msgid "Video track <span class=\"count\">(%s)</span>"
+msgstr ""

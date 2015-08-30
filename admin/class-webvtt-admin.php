@@ -56,7 +56,20 @@ class WebVTT_Admin {
 			);
 		} elseif ( 0 === strpos( $t, 'video/' ) && $ts = $webvtt->get_tracks( $post->post_name ) ) {
 			$nl = strlen( $post->post_name ) + 1;
-			$locale = class_exists( 'Locale' ) ? get_locale() : false;
+
+			static $labels, $locale;
+			if ( ! $labels ) {
+				$labels = array(
+					'captions' => __( 'Video Captions', 'webvtt' ),
+					'chapters' => __( 'Video Chapters', 'webvtt' ),
+					'descriptions' => __( 'Video Descriptions', 'webvtt' ),
+					'metadata' => __( 'Video Metadata', 'webvtt' ),
+					'subtitles' => __( 'Video Subtitles', 'webvtt' ),
+				);
+
+				$locale = class_exists( 'Locale' ) ? get_locale() : false;
+			}
+
 			$vtts = array();
 			foreach ( $ts as $i ) {
 				$t = substr( $i->post_name, $nl, -3 );
@@ -77,7 +90,7 @@ class WebVTT_Admin {
 				}
 
 				$form_fields[ 'video_' . $t ] = array(
-					'label' => sprintf( __( 'Video %s', 'webvtt' ), $t ),
+					'label' => $labels[ $t ],
 					'input' => 'html',
 					'html' => '<ol>' . $h . '</ol>',
 				);

@@ -21,6 +21,8 @@ class WebVTT {
 	 * Initialize the class along with shared public and admin hooks.
 	 */
 	function __construct() {
+		add_action( 'init', array( &$this, 'init' ) );
+
 		add_filter( 'wp_video_shortcode', array( &$this, 'wp_video_shortcode' ), 10, 5 );
 	}
 
@@ -131,6 +133,19 @@ class WebVTT {
 		$p = strrpos( $n, '.' );
 
 		return false === $p ? $n : substr( $n, 0, $p );
+	}
+
+	/**
+	 * An action matching the same name that loads the text domain for
+	 * internationalization (i18n) support.
+	 *
+	 * The directory containing the gettext files is "languages" at the
+	 * base of the plugin directory by default.
+	 *
+	 * @see load_plugin_textdomain()
+	 */
+	function init() {
+		load_plugin_textdomain( 'webvtt', false, 'webvtt/languages' );
 	}
 
 	/**
