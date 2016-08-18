@@ -93,7 +93,7 @@ class WebVTT {
 	/**
 	 * Get a video post attachment by a VTT attachment name (slug).
 	 *
-	 * @param string $name The name (slug) of a VTT attachmentto find
+	 * @param string $name The name (slug) of a VTT attachment to find
 	 * it's corresponding video.
 	 * @return WP_Post|null A WP_Post that is associated with the VTT
 	 * name (slug), otherwise `null`.
