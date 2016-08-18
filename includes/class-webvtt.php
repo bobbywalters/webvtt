@@ -158,7 +158,7 @@ class WebVTT {
 	 * @see WP_Query::get()
 	 */
 	function posts_where( $where, &$wp_query ) {
-		if ( $like = $wp_query->get( 'vtt_like' ) ) {
+		if ( $like = sanitize_title_for_query( $wp_query->get( 'vtt_like' ) ) ) {
 			global $wpdb;
 
 			// $wpdb->esc_like was added in WP 4.0.0 but avoiding this call
