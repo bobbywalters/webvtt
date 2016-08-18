@@ -33,7 +33,6 @@ class WebVTT {
 	 * video name.
 	 * @return array An array of WP_Post attachments for all associated
 	 * VTTs. The array may be empty if no VTTs match the supplied name.
-	 * @uses WebVTT::get_video_name()
 	 * @uses WebVTT::posts_where()
 	 * @see WP_Query::__construct()
 	 * @see WP_Query::query()
@@ -129,10 +128,7 @@ class WebVTT {
 	 * @see wp_basename()
 	 */
 	function get_video_name( $video ) {
-		$n = wp_basename( $video );
-		$p = strrpos( $n, '.' );
-
-		return false === $p ? $n : substr( $n, 0, $p );
+		return pathinfo( parse_url( $video, PHP_URL_PATH ), PATHINFO_FILENAME );
 	}
 
 	/**
