@@ -11,7 +11,7 @@ Add HTML5 text track files to videos.
 
 == Description ==
 
-Creates any number of HTML5 <track> elements for uploaded WebVTT files for videos displayed using the `[video]` shortcode.
+Creates any number of HTML5 <track> elements for uploaded WebVTT files for videos displayed using the `[playlist]` and `[video]` shortcodes.
 
 The uploaded WebVTT file names must follow this convention to be recognized:
 `<video file name> + <separator> + <WebVTT track kind> + <separator> + <language code> + '.vtt'`
@@ -65,6 +65,15 @@ Please see the Description section for a full explanation of the VTT file name f
 4. Localization support on all screens.
 
 == Changelog ==
+
+= 1.3.0 =
+2016-08-27
+
+* NEW: VTTs will now show up when using the `[playlist]` shortcode.
+* FIX: Sanitize video name when querying for VTTs.
+* FIX: Retrieve vide name from URL with query parameters.
+
+Props @leocaseiro.
 
 = 1.2.0 =
 2015-08-30

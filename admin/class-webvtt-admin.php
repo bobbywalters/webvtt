@@ -21,6 +21,11 @@ class WebVTT_Admin {
 	 * Initialize the class and admin hooks.
 	 */
 	function __construct() {
+		global $webvtt;
+
+		add_action( 'admin_enqueue_scripts', array( &$webvtt, 'enqueue_playlist_script' ) );
+		add_action( 'wp_ajax_parse-media-shortcode', array( &$webvtt, 'enqueue_playlist_script' ), 1 );
+
 		add_filter( 'attachment_fields_to_edit', array( &$this, 'attachment_fields_to_edit' ), 10, 2 );
 		add_filter( 'post_mime_types', array( &$this, 'post_mime_types' ) );
 	}
