@@ -315,7 +315,8 @@ class WebVTT {
 			}
 		}
 
-		if ( empty( $attachments = get_posts( $args ) ) ) {
+		$attachments = get_posts( $args );
+		if ( empty( $attachments ) ) {
 			return '';
 		}
 
@@ -390,7 +391,8 @@ class WebVTT {
 				$track['webvtt'] = $meta;
 			}
 
-			if ( ! empty( $meta = wp_get_attachment_metadata( $a->ID ) ) ) {
+			$meta = wp_get_attachment_metadata( $a->ID );
+			if ( ! empty( $meta ) ) {
 				foreach ( wp_get_attachment_id3_keys( $a ) as $key => $label ) {
 					if ( ! empty( $meta[ $key ] ) ) {
 						$track['meta'][ $key ] = $meta[ $key ];
@@ -417,7 +419,7 @@ class WebVTT {
 				}
 			}
 
-			if ( true === $atts['images'] && ! empty( $thumb_id = get_post_thumbnail_id( $a->ID ) ) ) {
+			if ( true === $atts['images'] && ( $thumb_id = get_post_thumbnail_id( $a->ID ) ) ) {
 				$track['image'] = wp_get_attachment_image_src( $thumb_id, 'full' );
 				$track['thumb'] = wp_get_attachment_image_src( $thumb_id );
 			}
