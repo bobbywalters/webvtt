@@ -66,10 +66,15 @@ Please see the Description section for a full explanation of the VTT file name f
 
 == Changelog ==
 
+= 1.3.2 =
+2016-08-28
+
+* FIX: Removed unneeded `empty()` calls.
+
 = 1.3.1 =
 2016-08-28
 
-* FIX: Updated usage of empty() to be compatible with PHP versions prior to 5.5.
+* FIX: Updated usage of `empty()` to be compatible with PHP versions prior to 5.5.
 
 = 1.3.0 =
 2016-08-27

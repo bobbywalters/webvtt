@@ -5,7 +5,7 @@
  * Description: Add HTML5 text track files to videos.
  * Author: Bobby Walters
  * Author URI: https://github.com/bobbywalters
- * Version: 1.3.1
+ * Version: 1.3.2
  * Text Domain: webvtt
  * Domain Path: /languages
  * License: GPLv2

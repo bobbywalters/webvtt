@@ -315,8 +315,7 @@ class WebVTT {
 			}
 		}
 
-		$attachments = get_posts( $args );
-		if ( empty( $attachments ) ) {
+		if ( ! $attachments = get_posts( $args ) ) {
 			return '';
 		}
 
@@ -391,8 +390,7 @@ class WebVTT {
 				$track['webvtt'] = $meta;
 			}
 
-			$meta = wp_get_attachment_metadata( $a->ID );
-			if ( ! empty( $meta ) ) {
+			if ( $meta = wp_get_attachment_metadata( $a->ID ) ) {
 				foreach ( wp_get_attachment_id3_keys( $a ) as $key => $label ) {
 					if ( ! empty( $meta[ $key ] ) ) {
 						$track['meta'][ $key ] = $meta[ $key ];
